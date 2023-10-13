@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asstes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asstes/css/style.css">
+    <title>CRUDS</title>
+    <style>
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- project head -->
+        <div class="crud">
+            <h1 style="text-align: center; text-transform: uppercase;">CRUDS</h1>
+            <h3 style="text-align: center; text-transform: uppercase;">Project Mangement System</h3>
+        </div>
+        <!-- project form  -->
+        <form class="form my-3">
+            <div class="row">
+                <input type="text" class="form-control" id="title" placeholder="title">
+            </div>
+
+            <div class="row my-4">
+                <div class="col">
+                    <input onkeyup="get_total()" type="number" class="form-control" id="price" placeholder="price">
+                </div>
+
+                <div class="col">
+                    <input onkeyup="get_total()" type="number" class="form-control" id="tax" placeholder="tax">
+                </div>
+
+                <div class="col">
+                    <input onkeyup="get_total()" type="number" class="form-control" id="discount" placeholder="discount">
+                </div>
+
+                <div class="col">
+                    <div class="total" id="total-parent">
+                        total-price: <span id="total"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row my-4">
+                <input type="number" class="form-control" id="count" placeholder="enter your count">
+            </div>
+
+            <div class="row my-4">
+                <input type="text" class="form-control" id="category" placeholder="category">
+            </div>
+
+            <div class="row my-4">
+                <input type="button" class="btn btn-success" id="create-btn" value="Create">
+            </div>
+
+        </form>
+        <div class="output">
+            <input type="text" id="search" class="form-control" placeholder="search by title" onkeyup="searchData(this.value)"><br>
+            <button type="button" class="btn w-25 btn-success" onclick="getSearchMode(this.id)" id="search-by-title">Search by Title</button>
+            <button type="button" class="btn w-25 btn-success" onclick="getSearchMode(this.id)" id="search-by-category">Search by category</button>
+            <div class="delete my-4">
+                <button type="button" class="btn btn-danger w-100" id="delete-btn">Delete(<span id="delete-items"></span>)</button>
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>tax</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./asstes/js/bootstrap.bundle.min.js"></script>
+    <script src="./asstes/js/main.js"></script>
+</body>
+
+</html>

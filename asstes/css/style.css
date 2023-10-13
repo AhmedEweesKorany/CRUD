@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+
+.total{
+    min-width: 160px;
+    padding: 10px;
+    font-size:20px;
+    background-color: red;
+    color: white;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+table tr th{
+    text-transform: uppercase;
+}
+
+th,td{
+    padding: 8px;
+}
+
+#update,#delete{
+    border: none;
+    padding: 9px;
+    border-radius: 4px;
+    width: 100px;
+    background: #dae9a3;
+}
+
+#update:hover,#delete:hover{
+    transition: 0.3s;
+    background: #e5ead3;
+}
